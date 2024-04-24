@@ -1,0 +1,15 @@
+[Unit]
+Description=Shows temperature on LCD
+After=network.target
+StartLimitIntervalSec=0
+ 
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=debian
+WorkingDirectory=/home/debian
+ExecStart=/home/debian/lcd  # Adjust the path as needed
+ 
+[Install]
+WantedBy=multi-user.target
